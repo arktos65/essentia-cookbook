@@ -1,0 +1,7 @@
+name             'essentia'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures essentia'
+long_description 'Installs/Configures essentia'
+version          '0.1.0'
