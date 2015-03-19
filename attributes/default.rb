@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: essentia
-# Recipe:: default
+# Attributes:: default
 #
 # Copyright 2015, Pulselocker, Inc.
 #
@@ -17,6 +17,16 @@
 # limitations under the License.
 #
 
-include_recipe 'essentia::_prepare'
-include_recipe 'essentia::_compile'
+# Installation attributes
+default['essentia']['git']['url'] = 'https://github.com/MTG/essentia.git'
+default['essentia']['git']['revision'] = 'v2.0.1'
+
+# Installation target attributes
+default['essentia']['target_directory'] = '/usr/local/bin'
+default['essentia']['target_owner'] = 'root'
+default['essentia']['target_group'] = 'root'
+default['essentia']['target_mode'] = '0755'
+
+# Other installation controls
+default['essentia']['include_python_bindings'] = true
 

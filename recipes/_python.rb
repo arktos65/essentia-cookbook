@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: essentia
-# Recipe:: default
+# Recipe:: _python
 #
 # Copyright 2015, Pulselocker, Inc.
 #
@@ -17,6 +17,7 @@
 # limitations under the License.
 #
 
-include_recipe 'essentia::_prepare'
-include_recipe 'essentia::_compile'
-
+# Install these packages to support Python bindings
+package ['python-numpy-dev', 'python-numpy'] do
+  action :install
+end
